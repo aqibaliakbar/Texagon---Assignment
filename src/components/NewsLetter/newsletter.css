@@ -89,6 +89,10 @@
   border-radius: 50px;
 }
 
+.newsletter-top-right .newsletter-input input[type="text"]::placeholder {
+  color: gray;
+}
+
 .newsletter-top-right .p3 {
   font-size: 1.25rem;
   margin-top: 1rem;
@@ -141,7 +145,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 0.8rem;
+  gap: 0.5rem;
   font-family: "Satoshi", sans-serif;
 }
 

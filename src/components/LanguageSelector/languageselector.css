@@ -5,16 +5,29 @@
   min-width: 2.5rem;
   outline: transparent solid 2px;
   color: var(--text-color);
-  border-radius: 12px;
+  border-radius: 0.75rem;
   border: none;
   font-size: 1rem;
   position: relative;
-  outline-offset: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
- 
+  gap: 0.3125rem;
+}
+
+.language-selector-button.active {
+  background-color: #cbd5e0;
+  color: var(--primary-color);
+}
+
+.language-selector-box.active a:first-child {
+  background-color: #edf2f7;
+  color: var(--primary-color);
+}
+
+.language-selector-box.active a:first-child:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
 }
 
 .language-selector-box {
@@ -27,9 +40,11 @@
   border: 1px solid #e2e8f2;
   border-radius: 0.375rem;
   padding: 0.5rem 0;
+  gap: 0.3rem;
   background: #fff;
   color: #edf2f7;
-	margin-top: 1rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
 }
 .language-selector-box a {
   padding: 0.375rem 0.75rem;
@@ -39,6 +54,27 @@
 
 .language-selector-box a:hover {
   background-color: var(--secondary-color);
-	color: #fff;
+  color: #fff;
 }
 
+@media (max-width: 850px) {
+  .language-selector-button {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .language-selector-button {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    padding: 0 1rem;
+    color: #ffff;
+    font-weight: 700;
+    font-family: "Satoshi-Medium", sans-serif;
+  }
+
+  .language-selector-button.active {
+    background-color: var(--secondary-color);
+    color: #ffff;
+  }
+}

@@ -1,7 +1,7 @@
 import Logo from "../../assets/images/IqLogo.svg";
 import LanguageSelector from "../LanguageSelector";
-import { IoMdMenu } from "react-icons/io";
-import { IoCloseOutline } from "react-icons/io5";
+import ResponsiveNavbar from "../ResponsiveNavbar";
+
 import "./navbar.css";
 import { useState } from "react";
 
@@ -11,14 +11,17 @@ const Navbar = () => {
   const handleClick = (e, href) => {
     e.preventDefault();
     setActiveLink(href);
+    if (openNav) {
+      setOpenNav(false);
+    }
   };
 
   const [openNav, setOpenNav] = useState(false);
 
   return (
     <nav className="navbar">
-      <div className=" hidden md-flex nav-container ">
-        <div>
+      <div className=" nav-container ">
+        <div className="">
           <a href="/">
             <div className="logo">
               <img src={Logo} alt="Logo" />
@@ -26,7 +29,7 @@ const Navbar = () => {
             </div>
           </a>
         </div>
-        <div className="nav-links">
+        <div className="nav-links md-flex ">
           <a
             className={activeLink === "/" ? "active" : ""}
             href="/"
@@ -56,7 +59,7 @@ const Navbar = () => {
             Pro Pricing
           </a>
         </div>
-        <div className="language-section">
+        <div className="language-section md-flex">
           <LanguageSelector />
           <a href="#">
             <button type="button" className="login-btn">
@@ -64,12 +67,12 @@ const Navbar = () => {
             </button>
           </a>
         </div>
-        <div
-          onClick={() => setOpenNav((prev) => !prev)}
-          className={`icon-container ${!openNav ? "md-hidden" : ""}`}
-        >
-          {openNav ? <IoCloseOutline size={20} /> : <IoMdMenu size={20} />}
-        </div>
+        <ResponsiveNavbar
+          openNav={openNav}
+          setOpenNav={setOpenNav}
+          activeLink={activeLink}
+          handleClick={handleClick}
+        />
       </div>
     </nav>
   );
