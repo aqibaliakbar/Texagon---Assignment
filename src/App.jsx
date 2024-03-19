@@ -1,17 +1,13 @@
-
-
-import Newsletter from './components/NewsLetter'
-
+import Navbar from "./components/Navbar";
+import Newsletter from "./components/NewsLetter";
 
 function App() {
-
-
   return (
     <>
-      
-<Newsletter/>
+      <Navbar />
+      <Newsletter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
