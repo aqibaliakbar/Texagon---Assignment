@@ -1,23 +1,23 @@
 import LanguageSelector from "../LanguageSelector";
 import { IoMdMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
-import "./responsiveNavbar.css"
+import "./responsiveNavbar.css";
 
-const ResponsiveNavbar = ({openNav, setOpenNav, handleClick, activeLink}) => {
-	return (
+const ResponsiveNavbar = ({ openNav, setOpenNav, handleClick, activeLink }) => {
+  return (
     <div>
       <div
         onClick={() => setOpenNav((prev) => !prev)}
         className={`icon-container ${!openNav ? "md-hidden" : ""}`}
       >
         {openNav ? (
-          <IoCloseOutline  className="close-icon" />
+          <IoCloseOutline className="close-icon" />
         ) : (
-          <IoMdMenu  className="menu-icon" />
+          <IoMdMenu className="menu-icon" />
         )}
       </div>
       {openNav && (
-        <div className="mobile-menu ">
+        <div className={`mobile-menu `}>
           <LanguageSelector />
           <a
             className={activeLink === "/" ? "active" : ""}
@@ -33,7 +33,6 @@ const ResponsiveNavbar = ({openNav, setOpenNav, handleClick, activeLink}) => {
           >
             Start Test
           </a>
-
           <a
             className={activeLink === "/pricing" ? "active" : ""}
             href="/pricing"
@@ -52,5 +51,5 @@ const ResponsiveNavbar = ({openNav, setOpenNav, handleClick, activeLink}) => {
       )}
     </div>
   );
-}
-export default ResponsiveNavbar
+};
+export default ResponsiveNavbar;

@@ -17,23 +17,24 @@ const LanguageSelector = () => {
     setShowOptions(false);
   };
 
-  const handleClickOutside = (event) => {
-    if (
-      buttonRef.current &&
-      dropdownRef.current &&
-      !buttonRef.current.contains(event.target) &&
-      !dropdownRef.current.contains(event.target)
-    ) {
-      setShowOptions(false);
-    }
-  };
-
   useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        buttonRef.current &&
+        dropdownRef.current &&
+        !buttonRef.current.contains(event.target) &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        setShowOptions(false);
+      }
+    };
+
     document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [buttonRef, dropdownRef, setShowOptions]);
 
   return (
     <div>

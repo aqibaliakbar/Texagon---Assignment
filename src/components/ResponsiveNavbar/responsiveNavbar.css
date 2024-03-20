@@ -1,31 +1,8 @@
-.mobile-menu {
-  position: fixed;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  left: 0%;
-  height: 100vh;
-  width: 100vw;
-  border-right: 1px solid #1f2937;
-  background-color: rgba(128, 128, 128, 0.8);
-  transition: right 0.5s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  gap: 3rem;
-  z-index: 99998;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-
 .close-icon {
   position: relative;
   z-index: 999999;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .menu-icon {
@@ -33,3 +10,21 @@
   width: 2.2rem;
   color: var(--secondary-color);
 }
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  z-index: 99998;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+}
+

@@ -1,5 +1,5 @@
 .footer-container {
-  width: 96%;
+  width: 94%;
   margin: 0 auto;
   font-size: 1rem;
   font-family: "Satoshi-Medium", sans-serif;
@@ -9,7 +9,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   width: 100%;
   min-width: 100%;
   margin-top: 3rem;

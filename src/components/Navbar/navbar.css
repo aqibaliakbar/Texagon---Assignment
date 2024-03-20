@@ -12,7 +12,7 @@
 }
 
 .nav-container {
-  width: 96%;
+  width: 94%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -98,12 +98,11 @@
   }
   .nav-links {
     width: 58%;
-
     font-size: 0.9rem;
   }
 }
 
-@media screen (max-width: 850px) {
+@media screen and (max-width: 850px) {
   .language-section {
     gap: 0.8rem;
   }
@@ -119,5 +118,3 @@
     display: block;
   }
 }
-
-

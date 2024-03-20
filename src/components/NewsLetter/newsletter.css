@@ -1,6 +1,6 @@
 .news-container {
   height: 100%;
-  width: 96%;
+  width: 94%;
   margin: 0 auto;
   font-family: "Satoshi", sans-serif;
 }
@@ -8,7 +8,7 @@
 .news-container .newsletter {
   background-color: rgb(9, 8, 8);
   border-radius: 2.5rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   color: aliceblue;
   padding: 5rem;
 }
@@ -112,7 +112,7 @@ hr {
   padding: 1rem;
   align-items: start;
   justify-content: center;
-  min-width: 30%;
+  width: 30%;
 }
 
 .newsletter-bottom-left .logo {
