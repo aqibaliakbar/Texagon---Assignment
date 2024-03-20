@@ -1,6 +1,7 @@
 .news-container {
   height: 100%;
   width: 92%;
+  max-width: 1920px;
   margin: 0 auto;
   font-family: "Satoshi", sans-serif;
 }

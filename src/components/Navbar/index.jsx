@@ -1,10 +1,15 @@
 import Logo from "../../assets/images/IqLogo.svg";
-import { links } from "../../data/data.js";
 import LanguageSelectorButton from "../LanguageSelectorButton/index.jsx";
 import ResponsiveNavbar from "../Navbar/ResponsiveNavbar/index.jsx";
-
 import "./navbar.css";
 import { useState } from "react";
+
+const links = [
+  { url: "/", text: "Home" },
+  { url: "/start-test", text: "Start Test" },
+  { url: "/certificate", text: "Check Certificate" },
+  { url: "/pricing", text: "Pro Pricing" },
+];
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("/");
