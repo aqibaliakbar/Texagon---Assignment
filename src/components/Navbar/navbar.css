@@ -9,6 +9,7 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  margin: 0 auto;
 }
 
 .nav-container {
@@ -17,12 +18,9 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  gap: 0.5rem;
   position: sticky;
   z-index: 100;
   top: 0px;
-  left: 0;
-  right: 0;
   padding: 1.75rem 2.5rem;
 }
 
@@ -40,13 +38,14 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  gap: 0.5rem;
+  gap: 0.6rem;
   width: 24rem;
 }
 
 .logo img {
   height: 2rem;
   width: 2.5rem;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -57,11 +56,15 @@
   font-size: 1rem;
 }
 
+.nav-items:hover{
+  color: var(--secondary-color);
+}
+
 .active {
   color: var(--secondary-color);
 }
 
-.language-section {
+.button-nav-section {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -76,10 +79,19 @@
   color: #fff;
   font-size: 0.875rem;
   border-radius: 20px;
-  border: none;
+  border: 1px solid var(--secondary-color);
   outline: none;
   height: 2.5rem;
   min-width: 2.5rem;
+  cursor: pointer;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) ease-in-out;
+  font-family: "Satoshi-Medium", sans-serif;
+}
+
+.login-btn:hover {
+  background-color: #fff;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
 }
 
 .icon-container {
@@ -97,8 +109,9 @@
     width: 5.5rem;
   }
   .nav-links {
-    width: 58%;
+    width: 55%;
     font-size: 0.9rem;
+    justify-content: space-around;
   }
 }
 

@@ -7,7 +7,7 @@ function App() {
     <>
       <Navbar />
       <Newsletter />
-      <Footer/>
+      <Footer />
     </>
   );
 }

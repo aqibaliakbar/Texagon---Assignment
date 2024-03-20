@@ -1,11 +1,11 @@
-import insta from "../../assets/images/insta.png"
-import fb from "../../assets/images/fb.png"
-import twitter from "../../assets/images/twitter.png"
-import linkedln from "../../assets/images/linkedln.png"
-import './footer.css'
+import insta from "../../assets/images/insta.png";
+import fb from "../../assets/images/fb.png";
+import twitter from "../../assets/images/twitter.png";
+import linkedln from "../../assets/images/linkedln.png";
+import "./footer.css";
 
 const Footer = () => {
-	return (
+  return (
     <div className="footer-container">
       <div className="footer">
         <p>© 2024 IQTEST.AI</p>
@@ -27,5 +27,5 @@ const Footer = () => {
       </div>
     </div>
   );
-}
-export default Footer
+};
+export default Footer;

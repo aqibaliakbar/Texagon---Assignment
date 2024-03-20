@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import "./languageselector.css";
+import "./languageSelectorButton.css";
 
-const LanguageSelector = () => {
+const LanguageSelectorButton = () => {
   const [showOptions, setShowOptions] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("English");
   const dropdownRef = useRef(null);
@@ -91,4 +91,4 @@ const LanguageSelector = () => {
   );
 };
 
-export default LanguageSelector;
+export default LanguageSelectorButton;

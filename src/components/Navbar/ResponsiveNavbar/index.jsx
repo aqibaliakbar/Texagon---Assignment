@@ -1,7 +1,8 @@
-import LanguageSelector from "../LanguageSelector";
 import { IoMdMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import "./responsiveNavbar.css";
+import { links } from "../../../data/data";
+import LanguageSelectorButton from "../../LanguageSelectorButton";
 
 const ResponsiveNavbar = ({ openNav, setOpenNav, handleClick, activeLink }) => {
   return (
@@ -18,29 +19,23 @@ const ResponsiveNavbar = ({ openNav, setOpenNav, handleClick, activeLink }) => {
       </div>
       {openNav && (
         <div className={`mobile-menu `}>
-          <LanguageSelector />
-          <a
-            className={activeLink === "/" ? "active" : ""}
-            href="/"
-            onClick={(e) => handleClick(e, "/")}
-          >
-            Home
-          </a>
-          <a
-            className={activeLink === "/start-test" ? "active" : ""}
-            href="/start-test"
-            onClick={(e) => handleClick(e, "/start-test")}
-          >
-            Start Test
-          </a>
-          <a
-            className={activeLink === "/pricing" ? "active" : ""}
-            href="/pricing"
-            onClick={(e) => handleClick(e, "/pricing")}
-          >
-            Pro Pricing
-          </a>
-          <div className="">
+          <LanguageSelectorButton />
+          {links.map(
+            (link, index) =>
+              index !== 2 && (
+                <a
+                  key={index}
+                  className={` menu-links ${
+                    activeLink === link.url ? "active" : ""
+                  }`}
+                  href={link.url}
+                  onClick={(e) => handleClick(e, link.url)}
+                >
+                  {link.text}
+                </a>
+              )
+          )}
+          <div>
             <a href="#">
               <button type="button" className="login-btn">
                 Login

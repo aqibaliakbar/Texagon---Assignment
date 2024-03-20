@@ -1,9 +1,9 @@
-import "./newsletter.css"
-import messageIcon from "../../assets/images/newsicon.png"
+import "./newsletter.css";
+import messageIcon from "../../assets/images/newsicon.png";
 import Logo from "../../assets/images/IqLogo.svg";
 
 const Newsletter = () => {
-	return (
+  return (
     <div className="news-container">
       <div className="newsletter">
         <div className="newsletter-top">
@@ -58,5 +58,5 @@ const Newsletter = () => {
       </div>
     </div>
   );
-}
-export default Newsletter
+};
+export default Newsletter;

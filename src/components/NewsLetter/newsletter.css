@@ -6,9 +6,9 @@
 }
 
 .news-container .newsletter {
-  background-color: rgb(9, 8, 8);
+  background-color: var(--primary-color);
   border-radius: 2.5rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   color: aliceblue;
   padding: 5rem;
 }
@@ -65,18 +65,6 @@
   width: 100%;
 }
 
-.newsletter-top-right .newsletter-input button {
-  background-color: var(--secondary-color);
-  padding: 0rem 1rem;
-  height: 3.5rem;
-  border-radius: 50px;
-  margin: 1rem 0;
-  border: none;
-  min-width: 10rem;
-  font-size: 1.5rem;
-  color: #fff;
-  font-family: "Satoshi", sans-serif;
-}
 .newsletter-top-right .newsletter-input input[type="text"] {
   width: inherit;
   height: 3.5rem;
@@ -90,7 +78,27 @@
 }
 
 .newsletter-top-right .newsletter-input input[type="text"]::placeholder {
-  color: gray;
+  color: rgb(156, 153, 153);
+}
+
+.newsletter-top-right .newsletter-input button {
+  background-color: var(--secondary-color);
+  padding: 0rem 1rem;
+  height: 3.5rem;
+  border-radius: 50px;
+  margin: 1rem 0;
+  border: none;
+  min-width: 10rem;
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: "Satoshi", sans-serif;
+  cursor: pointer;
+}
+
+.newsletter-top-right .newsletter-input button:hover {
+  background-color: #fff;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
 }
 
 .newsletter-top-right .p3 {
